@@ -1,0 +1,52 @@
+Source: pyzmq
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Miguel Landaeta <miguel@miguel.cc>
+Build-Depends: debhelper (>= 7.0.50~), python-all-dev (>= 2.4), python-support,
+ python-all-dbg (>= 2.4), python-setuptools, cython-dbg, libzmq-dev
+Standards-Version: 3.9.1
+XS-Python-Version: all
+Homepage: http://www.zeromq.org/bindings:python
+Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/pyzmq/trunk
+Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyzmq/trunk/
+
+Package: python-pyzmq
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}
+Provides: ${python:Provides}
+XB-Python-Version: ${python:Versions}
+Description: Python bindings for 0MQ library
+ Python bindings for 0QM. 0MQ is a small, fast, and free
+ software library that gives you message-passing concurrency
+ for applications in most common languages.
+ .
+ The 0MQ lightweight messaging kernel is a library which
+ extends the standard socket interfaces with features
+ traditionally provided by specialised messaging middleware
+ products. 0MQ sockets provide an abstraction of asynchronous
+ message queues, multiple messaging patterns, message
+ filtering (subscriptions), seamless access to multiple
+ transport protocols and more. 
+ 
+Package: python-pyzmq-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
+ python-pyzmq (= ${binary:Version})
+Recommends: python-dbg
+Description: Python bindings for 0MQ library - debugging files
+ Python bindings for 0QM. 0MQ is a small, fast, and free
+ software library that gives you message-passing concurrency
+ for applications in most common languages.
+ .
+ The 0MQ lightweight messaging kernel is a library which
+ extends the standard socket interfaces with features
+ traditionally provided by specialised messaging middleware
+ products. 0MQ sockets provide an abstraction of asynchronous
+ message queues, multiple messaging patterns, message
+ filtering (subscriptions), seamless access to multiple
+ transport protocols and more. 
+ .
+ This package contains the extension built for the Python debug interpreter.

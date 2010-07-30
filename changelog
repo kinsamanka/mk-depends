@@ -1,0 +1,5 @@
+pyzmq (0.1.20100703+git18f5d06155-1) UNRELEASED; urgency=low
+
+  * Initial release. (Closes: #590633),
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Thu, 29 Jul 2010 20:21:19 -0430

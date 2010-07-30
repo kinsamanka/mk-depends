@@ -1,0 +1,19 @@
+Description: disable distutils clean command provided by upstream
+ The distutils clean command provided by upstream is disabled because
+ it fails to recognize -a flag. The problem is resolved when that
+ command is disabled.
+Bug-Debian: http://bugs.debian.org/590633
+Forwarded: no
+Last-Update: 2010-07-28
+
+--- pyzmq-0.1.20100703+git18f5d06155.orig/setup.py
++++ pyzmq-0.1.20100703+git18f5d06155/setup.py
+@@ -87,7 +87,7 @@ class CleanCommand(Command):
+ # Extensions
+ #-----------------------------------------------------------------------------
+ 
+-cmdclass = {'test':TestCommand, 'clean':CleanCommand }
++cmdclass = {'test':TestCommand}
+ 
+ try:
+     from Cython.Distutils import build_ext

@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	-dh_auto_clean
+
+override_dh_install:
+	for python in $(shell pyversions -r); do \
+		$$python setup.py install --root debian/python-pyzmq --prefix /usr; \
+	done
+
+override_dh_auto_test:
+# Almost all tests are broken because OpenPGM doesn't seem to be initialized
+# correctly or there is not support for OpenPGM in libzmq0. I don't know if
+# #566126 have something to do with this, anyway the affected tests are:
+# zmq/tests/test_context.py
+# zmq/tests/test_pair.py
+# zmq/tests/test_poll.py
+# zmq/tests/test_pubsub.py
+# zmq/tests/test_reqrep.py
+# zmq/tests/test_socket.py
+#ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+#	for python in $(shell pyversions -r); do \
+#		$$python setup.py test; \
+#		$$python-dbg setup.py test; \
+#	done
+#endif
+
+override_dh_strip:
+	dh_strip --dbg-package=python-pyzmq-dbg
+	cd debian/python-pyzmq-dbg/usr/lib/debug/usr/lib && mv pyshared pymodules
+
+get-orig-source:
+	debian/orig-tar.sh

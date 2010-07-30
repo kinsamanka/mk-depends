@@ -1,0 +1,28 @@
+The sources where downloaded from http://github.com/zeromq/pyzmq.
+
+Files: *
+Copyright: © 2010 Brian E. Granger,
+ © 2010 Andrew Gwozdziewycz,
+ © 2010 Fernando Perez.
+License: LGPL-3
+
+Files: perf/*
+Copyright: © 2007-2010, iMatix Corporation.
+License: LGPL-3
+
+Files: zmq/eventloop/zmqstream.py,
+ zmq/eventloop/ioloop.py
+Copyright: © 2009, Facebook.
+License: Apache-2.0
+
+Files: debian/*
+Copyright: © 2010 Miguel Landaeta <miguel@miguel.cc>
+License: Public Domain
+
+License: LGPL-3
+ The full text of the GNU Lesser General Public License version 3
+ is distributed in /usr/share/common-licenses/LGPL-3 on Debian systems.
+
+License: Apache-2.0
+ The full text of the Apache 2.0 license is distributed in
+ /usr/share/common-licenses/Apache-2.0 on Debian systems.
