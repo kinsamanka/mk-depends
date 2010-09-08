@@ -1,5 +1,5 @@
-pyzmq (0.1.20100703+git18f5d06155-1) UNRELEASED; urgency=low
+pyzmq (0.1.20100703+git18f5d06155-1) unstable; urgency=low
 
-  * Initial release. (Closes: #590633),
+  * Initial release. (Closes: #590633)
 
  -- Miguel Landaeta <miguel@miguel.cc>  Wed, 08 Sep 2010 13:50:41 -0430
