@@ -11,7 +11,7 @@ Homepage: http://www.zeromq.org/bindings:python
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/pyzmq/trunk
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyzmq/trunk/
 
-Package: python-pyzmq
+Package: python-zmq
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}
 Provides: ${python:Provides}
@@ -29,12 +29,12 @@ Description: Python bindings for 0MQ library
  filtering (subscriptions), seamless access to multiple
  transport protocols and more. 
  
-Package: python-pyzmq-dbg
+Package: python-zmq-dbg
 Section: debug
 Priority: extra
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
- python-pyzmq (= ${binary:Version})
+ python-zmq (= ${binary:Version})
 Recommends: python-dbg
 Description: Python bindings for 0MQ library - debugging files
  Python bindings for 0QM. 0MQ is a small, fast, and free

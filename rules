@@ -7,7 +7,7 @@ override_dh_auto_clean:
 
 override_dh_install:
 	for python in $(shell pyversions -r); do \
-		$$python setup.py install --root debian/python-pyzmq --prefix /usr; \
+		$$python setup.py install --root debian/python-zmq --prefix /usr; \
 	done
 
 override_dh_auto_test:
@@ -28,8 +28,8 @@ override_dh_auto_test:
 #endif
 
 override_dh_strip:
-	dh_strip --dbg-package=python-pyzmq-dbg
-	cd debian/python-pyzmq-dbg/usr/lib/debug/usr/lib && mv pyshared pymodules
+	dh_strip --dbg-package=python-zmq-dbg
+	cd debian/python-zmq-dbg/usr/lib/debug/usr/lib && mv pyshared pymodules
 
 get-orig-source:
 	debian/orig-tar.sh
