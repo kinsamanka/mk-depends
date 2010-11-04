@@ -1,0 +1,3 @@
+version=3
+https://github.com/zeromq/pyzmq/archives/master \
+/downloads/zeromq/pyzmq/pyzmq-([0-9\.]+).tar.gz/qr_code debian debian/orig-tar.sh
