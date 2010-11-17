@@ -4,16 +4,16 @@ Description: disable distutils clean command provided by upstream
  command is disabled.
 Bug-Debian: http://bugs.debian.org/590633
 Forwarded: no
-Last-Update: 2010-07-28
+Last-Update: 2010-11-17
 
---- pyzmq-0.1.20100703+git18f5d06155.orig/setup.py
-+++ pyzmq-0.1.20100703+git18f5d06155/setup.py
-@@ -87,7 +87,7 @@ class CleanCommand(Command):
+--- pyzmq-2.0.10.orig/setup.py
++++ pyzmq-2.0.10/setup.py
+@@ -154,7 +154,7 @@ if ignore_common_warnings:
  # Extensions
  #-----------------------------------------------------------------------------
  
 -cmdclass = {'test':TestCommand, 'clean':CleanCommand }
 +cmdclass = {'test':TestCommand}
  
- try:
-     from Cython.Distutils import build_ext
+ includes = [pjoin('zmq', sub) for sub in ('utils','core','devices')]
+ 
