@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Miguel Landaeta <miguel@miguel.cc>
 Build-Depends: debhelper (>= 7.0.50~), python-all-dev (>= 2.4), python-support,
- python-all-dbg (>= 2.4), python-setuptools, cython-dbg, libzmq-dev
+ python-all-dbg (>= 2.4), python-setuptools, cython-dbg (>= 0.13), libzmq-dev
 Standards-Version: 3.9.1
 XS-Python-Version: all
 Homepage: http://www.zeromq.org/bindings:python
