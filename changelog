@@ -1,9 +1,9 @@
-pyzmq (2.0.8-1) UNRELEASED; urgency=low
+pyzmq (2.0.10-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * Add watch file.
 
- -- Miguel Landaeta <miguel@miguel.cc>  Wed, 03 Nov 2010 21:38:13 -0430
+ -- Miguel Landaeta <miguel@miguel.cc>  Wed, 17 Nov 2010 16:14:17 -0430
 
 pyzmq (0.1.20100703+git18f5d06155-1) unstable; urgency=low
 
