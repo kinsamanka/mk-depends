@@ -1,6 +1,7 @@
-pyzmq (2.0.10-1) UNRELEASED; urgency=low
+pyzmq (2.0.10-1) experimental; urgency=low
 
   * New upstream release.
+    - cpython minimum build version bumped to 0.13
   * Add watch file.
 
  -- Miguel Landaeta <miguel@miguel.cc>  Wed, 17 Nov 2010 16:14:17 -0430
