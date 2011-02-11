@@ -1,4 +1,4 @@
-pyzmq (2.0.10.1-1) UNRELEASED; urgency=low
+pyzmq (2.0.10.1-1) experimental; urgency=low
 
   * New upstream release.
   * Migrate to dh_python2 and drop Build-Depends on python-support.
