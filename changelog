@@ -3,8 +3,9 @@ pyzmq (2.1.7-1) unstable; urgency=low
   * New upstream version.
   * Build-depend on zeromq 2.1.7.
   * Bump Standards-Version to 3.9.2, no changes needed.
+  * Only clean the zmq directory if the directory exists. 
 
- -- Bernd Zeimetz <bzed@debian.org>  Thu, 19 May 2011 19:38:28 +0200
+ -- Bernd Zeimetz <bzed@debian.org>  Thu, 19 May 2011 19:42:31 +0200
 
 pyzmq (2.0.10.1-2) unstable; urgency=low
 
