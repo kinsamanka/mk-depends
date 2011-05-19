@@ -6,8 +6,9 @@ pyzmq (2.1.7-1) unstable; urgency=low
   * Only clean the zmq directory if the directory exists. 
   * Disable fix-distutils patch. 
   * Run setup.py clean manually. 
+  * Remove all .pyc files during clean. 
 
- -- Bernd Zeimetz <bzed@debian.org>  Thu, 19 May 2011 19:52:30 +0200
+ -- Bernd Zeimetz <bzed@debian.org>  Thu, 19 May 2011 19:54:16 +0200
 
 pyzmq (2.0.10.1-2) unstable; urgency=low
 
