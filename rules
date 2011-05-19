@@ -3,7 +3,10 @@
 	dh --with python2 $@
 
 override_dh_auto_clean:
-	-dh_auto_clean
+	if [ -f setup.py ]; then for python in $(shell pyversions -r); do \
+		$$python setup.py clean; \
+		$$python-dbg setup.py clean; \
+        done; fi
 	if [ -d zmq ]; then find zmq -name '*.c' -delete; fi
 
 override_dh_install:
