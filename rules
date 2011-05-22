@@ -21,21 +21,16 @@ override_dh_install:
 	dh_install
 
 override_dh_auto_test:
-# Almost all tests are broken because OpenPGM doesn't seem to be initialized
-# correctly or there is not support for OpenPGM in libzmq0. I don't know if
-# #566126 have something to do with this, anyway the affected tests are:
-# zmq/tests/test_context.py
-# zmq/tests/test_pair.py
-# zmq/tests/test_poll.py
-# zmq/tests/test_pubsub.py
-# zmq/tests/test_reqrep.py
-# zmq/tests/test_socket.py
-#ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-#	for python in $(shell pyversions -r); do \
-#		$$python setup.py test; \
-#		$$python-dbg setup.py test; \
-#	done
-#endif
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+       set -e; \
+       for python in $(shell pyversions -r); do \
+               for build in \  -dbg; do \
+                       find zmq -name '*.so' -delete; \
+                       $$python$$build setup.py build_ext --inplace; \
+                       $$python$$build setup.py test; \
+               done; \
+       done
+endif
 
 override_dh_strip:
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))

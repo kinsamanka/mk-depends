@@ -11,8 +11,9 @@ pyzmq (2.1.7-1) UNRELEASED; urgency=low
   [ Miguel Landaeta ]
   * Update copyright dates and make it DEP-5 compliant.
   * Refresh patches.
+  * Enable build-time tests.
 
- -- Miguel Landaeta <miguel@miguel.cc>  Sun, 22 May 2011 18:10:26 -0430
+ -- Miguel Landaeta <miguel@miguel.cc>  Sun, 22 May 2011 18:18:00 -0430
 
 pyzmq (2.0.10.1-2) unstable; urgency=low
 
