@@ -5,7 +5,6 @@ pyzmq (2.1.7-1) UNRELEASED; urgency=low
   * Build-depend on zeromq 2.1.7.
   * Bump Standards-Version to 3.9.2, no changes needed.
   * Only clean the zmq directory if the directory exists. 
-  * Disable fix-distutils patch. 
   * Run setup.py clean manually. 
   * Remove all .pyc files during clean. 
 
