@@ -4,16 +4,14 @@ pyzmq (2.1.7-1) UNRELEASED; urgency=low
   * New upstream version.
   * Build-depend on zeromq 2.1.7.
   * Bump Standards-Version to 3.9.2, no changes needed.
-  * Only clean the zmq directory if the directory exists. 
-  * Run setup.py clean manually. 
-  * Remove all .pyc files during clean. 
+  * Remove all .pyc and .so files during clean. 
 
   [ Miguel Landaeta ]
   * Update copyright dates and make it DEP-5 compliant.
   * Refresh patches.
   * Enable build-time tests.
 
- -- Miguel Landaeta <miguel@miguel.cc>  Sun, 22 May 2011 18:18:00 -0430
+ -- Miguel Landaeta <miguel@miguel.cc>  Sun, 22 May 2011 18:57:30 -0430
 
 pyzmq (2.0.10.1-2) unstable; urgency=low
 
