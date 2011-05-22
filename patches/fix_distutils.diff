@@ -4,16 +4,17 @@ Description: disable distutils clean command provided by upstream
  command is disabled.
 Bug-Debian: http://bugs.debian.org/590633
 Forwarded: no
-Last-Update: 2010-11-17
+Last-Update: 2011-05-21
 
---- pyzmq-2.0.10.orig/setup.py
-+++ pyzmq-2.0.10/setup.py
-@@ -154,7 +154,7 @@ if ignore_common_warnings:
+--- pyzmq-2.1.7.orig/setup.py
++++ pyzmq-2.1.7/setup.py
+@@ -466,7 +466,8 @@ COMPILER_SETTINGS['extra_compile_args']
  # Extensions
  #-----------------------------------------------------------------------------
  
--cmdclass = {'test':TestCommand, 'clean':CleanCommand }
-+cmdclass = {'test':TestCommand}
+-cmdclass = {'test':TestCommand, 'clean':CleanCommand, 'revision':GitRevisionCommand,
++#cmdclass = {'test':TestCommand, 'clean':CleanCommand, 'revision':GitRevisionCommand,
++cmdclass = {'test':TestCommand, 'revision':GitRevisionCommand,
+             'configure': Configure, 'build': CopyingBuild}
  
- includes = [pjoin('zmq', sub) for sub in ('utils','core','devices')]
- 
+ COMPILER_SETTINGS['include_dirs'] += [pjoin('zmq', sub) for sub in ('utils','core','devices')]
