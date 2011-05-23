@@ -1,4 +1,4 @@
-pyzmq (2.1.7-1) UNRELEASED; urgency=low
+pyzmq (2.1.7-1) unstable; urgency=low
 
   [ Bernd Zeimetz ]
   * New upstream version.
@@ -11,7 +11,7 @@ pyzmq (2.1.7-1) UNRELEASED; urgency=low
   * Refresh patches.
   * Enable build-time tests.
 
- -- Miguel Landaeta <miguel@miguel.cc>  Sun, 22 May 2011 18:57:30 -0430
+ -- Miguel Landaeta <miguel@miguel.cc>  Mon, 23 May 2011 08:57:59 +0200
 
 pyzmq (2.0.10.1-2) unstable; urgency=low
 
