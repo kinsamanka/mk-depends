@@ -1,3 +1,9 @@
+pyzmq (2.1.7-1miguel) unstable; urgency=low
+
+  * Fix kFreeBSD build. (Closes: #637777).
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Sun, 14 Aug 2011 18:32:25 -0430
+
 pyzmq (2.1.7-1) unstable; urgency=low
 
   [ Bernd Zeimetz ]
