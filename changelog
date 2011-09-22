@@ -1,13 +1,11 @@
-pyzmq (2.1.9-1) UNRELEASED; urgency=low
-
-  [ Miguel Landaeta ]
-  * Fix kFreeBSD build. (Closes: #637777).
+pyzmq (2.1.9-1) unstable; urgency=low
 
   [ Bernd Zeimetz ]
   * New upstream version
+    - should build on kFreeBSD without patches (Closes: #637777).
   * Build-depend on zeromq 2.1.9
 
- -- Bernd Zeimetz <bzed@debian.org>  Thu, 22 Sep 2011 22:43:45 +0200
+ -- Bernd Zeimetz <bzed@debian.org>  Fri, 23 Sep 2011 00:16:39 +0200
 
 pyzmq (2.1.7-1) unstable; urgency=low
 
