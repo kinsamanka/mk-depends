@@ -1,11 +1,10 @@
 pyzmq (2.1.9-1) unstable; urgency=low
 
-  [ Bernd Zeimetz ]
   * New upstream version
     - should build on kFreeBSD without patches (Closes: #637777).
   * Build-depend on zeromq 2.1.9
 
- -- Bernd Zeimetz <bzed@debian.org>  Fri, 23 Sep 2011 00:16:39 +0200
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 23 Sep 2011 00:16:39 +0200
 
 pyzmq (2.1.7-1) unstable; urgency=low
 
