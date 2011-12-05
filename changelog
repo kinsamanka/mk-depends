@@ -1,5 +1,6 @@
 pyzmq (2.1.10-2) UNRELEASED; urgency=low
 
+  [ Julian Taylor ]
   * remove python:Provides, python:Breaks and XB-Python-Version
     not needed with dh_python2
   * bump python dependency to >= 2.6.6-3~ for dh_python2
@@ -10,7 +11,7 @@ pyzmq (2.1.10-2) UNRELEASED; urgency=low
   * add a directory existance check to clean target to allow build with
     git-buildpackage --git-overlay
 
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 05 Dec 2011 21:31:28 +0100
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Mon, 05 Dec 2011 21:42:24 +0100
 
 pyzmq (2.1.10-1) unstable; urgency=low
 
