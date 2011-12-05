@@ -14,7 +14,7 @@ Files: perf/*
 Copyright: © 2007-2010, iMatix Corporation.
 License: LGPL-3
 
-Files: zmq/eventloop/zmqstream.py,
+Files: zmq/eventloop/zmqstream.py
  zmq/eventloop/ioloop.py
 Copyright: © 2009, Facebook.
 License: Apache-2.0

@@ -5,6 +5,7 @@ pyzmq (2.1.10-2) UNRELEASED; urgency=low
   * bump python dependency to >= 2.6.6-3~ for dh_python2
   * do not delete *_d.so files from lib/debug in python-zmq-dbg
     - needed for gdb when using debug interpreter
+  * fix dep5 copyright syntax error
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 04 Dec 2011 16:48:54 +0100
 
