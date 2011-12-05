@@ -7,8 +7,10 @@ pyzmq (2.1.10-2) UNRELEASED; urgency=low
     - needed for gdb when using debug interpreter
   * fix dep5 copyright syntax error
   * add python3 packages (Closes: #636484)
+  * add a directory existance check to clean target to allow build with
+    git-buildpackage --git-overlay
 
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 04 Dec 2011 17:06:13 +0100
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 05 Dec 2011 21:31:28 +0100
 
 pyzmq (2.1.10-1) unstable; urgency=low
 
