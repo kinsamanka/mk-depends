@@ -33,7 +33,6 @@ endif
 override_dh_strip:
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip --dbg-package=python-zmq-dbg
-	find debian/python-zmq-dbg/usr/lib/debug -name '*_d.so' -delete
 endif
 
 get-orig-source:

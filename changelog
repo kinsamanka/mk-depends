@@ -3,9 +3,10 @@ pyzmq (2.1.10-2) UNRELEASED; urgency=low
   * remove python:Provides, python:Breaks and XB-Python-Version
     not needed with dh_python2
   * bump python dependency to >= 2.6.6-3~ for dh_python2
+  * do not delete *_d.so files from lib/debug in python-zmq-dbg
+    - needed for gdb when using debug interpreter
 
-
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 04 Dec 2011 16:43:30 +0100
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 04 Dec 2011 16:48:54 +0100
 
 pyzmq (2.1.10-1) unstable; urgency=low
 
