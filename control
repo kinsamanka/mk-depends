@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Miguel Landaeta <miguel@miguel.cc>
 Build-Depends: debhelper (>= 7.0.50~),
- python-all-dev (>= 2.4), python-all-dbg (>= 2.4), python-setuptools, cython-dbg (>= 0.13),
+ python-all-dev (>= 2.6.6-3~), python-all-dbg (>= 2.6.6-3~), python-setuptools, cython-dbg (>= 0.13),
  libzmq-dev (>= 2.1.10), libzmq-dev (<= 2.1.11)
 Standards-Version: 3.9.2
 X-Python-Version: >= 2.4
@@ -15,9 +15,6 @@ Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyzmq/trunk/
 Package: python-zmq
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}
-Provides: ${python:Provides}
-Breaks: ${python:Breaks}
-XB-Python-Version: ${python:Versions}
 Description: Python bindings for 0MQ library
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
@@ -38,7 +35,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
  python-zmq (= ${binary:Version})
 Recommends: python-dbg
-Breaks: ${python:Breaks}
 Description: Python bindings for 0MQ library - debugging files
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
