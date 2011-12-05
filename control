@@ -5,9 +5,10 @@ Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.
 Uploaders: Miguel Landaeta <miguel@miguel.cc>
 Build-Depends: debhelper (>= 7.0.50~),
  python-all-dev (>= 2.6.6-3~), python-all-dbg (>= 2.6.6-3~), python-setuptools, cython-dbg (>= 0.13),
- libzmq-dev (>= 2.1.10), libzmq-dev (<= 2.1.11)
+ libzmq-dev (>= 2.1.10), libzmq-dev (<= 2.1.11), python3-all-dev (>= 3.2), python3-all-dbg (>= 3.2)
 Standards-Version: 3.9.2
 X-Python-Version: >= 2.4
+X-Python3-Version: >= 3.2
 Homepage: http://www.zeromq.org/bindings:python
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/pyzmq/trunk
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyzmq/trunk/
@@ -26,7 +27,7 @@ Description: Python bindings for 0MQ library
  products. 0MQ sockets provide an abstraction of asynchronous
  message queues, multiple messaging patterns, message
  filtering (subscriptions), seamless access to multiple
- transport protocols and more. 
+ transport protocols and more.
  
 Package: python-zmq-dbg
 Section: debug
@@ -46,6 +47,46 @@ Description: Python bindings for 0MQ library - debugging files
  products. 0MQ sockets provide an abstraction of asynchronous
  message queues, multiple messaging patterns, message
  filtering (subscriptions), seamless access to multiple
- transport protocols and more. 
+ transport protocols and more.
  .
  This package contains the extension built for the Python debug interpreter.
+
+Package: python3-zmq
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, ${python3:Depends}
+Description: Python bindings for 0MQ library
+ Python bindings for 0MQ. 0MQ is a small, fast, and free
+ software library that gives you message-passing concurrency
+ for applications in most common languages.
+ .
+ The 0MQ lightweight messaging kernel is a library which
+ extends the standard socket interfaces with features
+ traditionally provided by specialised messaging middleware
+ products. 0MQ sockets provide an abstraction of asynchronous
+ message queues, multiple messaging patterns, message
+ filtering (subscriptions), seamless access to multiple
+ transport protocols and more.
+ .
+ This package contains the extension built for the Python3 interpreter.
+
+Package: python3-zmq-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends},
+ python3-zmq (= ${binary:Version})
+Recommends: python-dbg
+Description: Python bindings for 0MQ library - debugging files
+ Python bindings for 0MQ. 0MQ is a small, fast, and free
+ software library that gives you message-passing concurrency
+ for applications in most common languages.
+ .
+ The 0MQ lightweight messaging kernel is a library which
+ extends the standard socket interfaces with features
+ traditionally provided by specialised messaging middleware
+ products. 0MQ sockets provide an abstraction of asynchronous
+ message queues, multiple messaging patterns, message
+ filtering (subscriptions), seamless access to multiple
+ transport protocols and more.
+ .
+ This package contains the extension built for the Python3 debug interpreter.

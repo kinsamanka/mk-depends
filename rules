@@ -1,6 +1,16 @@
 #!/usr/bin/make -f
+
+PY3VERS = $(shell py3versions -rv)
+
 %:
-	dh $@ --with python2
+	dh $@ --with python2,python3
+
+override_dh_auto_build:
+	dh_auto_build
+	set -e && for pyv in $(PY3VERS); do \
+	  python$$pyvers setup.py build ; \
+	  python$${pyv}-dbg setup.py build ; \
+	done
 
 override_dh_auto_clean:
 	-dh_auto_clean
@@ -10,10 +20,21 @@ override_dh_auto_clean:
 
 override_dh_install:
 	# Install everything excluding the *_d.so debug extensions to python-zmq
-	dh_install -X"*_d.so" "debian/tmp/*" -p python-zmq
+	dh_install -X"*_d.so" "debian/tmp/usr/lib/python2.*" -p python-zmq
 
 	# Install the debug extensions to python-zmq-dbg
-	dh_install "usr/lib/python*/*-packages/zmq/*/*_d.so" -p python-zmq-dbg
+	dh_install "usr/lib/python2.*/*-packages/zmq/*/*_d.so" -p python-zmq-dbg
+
+	# Install python3 files
+	set -e && for pyv in $(PY3VERS); do \
+	  python$$pyv setup.py install --install-layout=deb \
+		--force --no-compile -O0 --root=$(CURDIR)/debian/python3-zmq; \
+	  python$${pyv}-dbg setup.py install --install-layout=deb \
+		--force --no-compile -O0 --root=$(CURDIR)/debian/python3-zmq-dbg; \
+	done
+	# remove a couple of header files already in python3-zmq
+	find debian/python3-zmq-dbg/usr/lib/ ! -type d ! -name '*.so' -delete
+
 
 	# Continue with regular dh_install
 	dh_install
@@ -28,11 +49,20 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 			$$python$$build setup.py test; \
 		done; \
 	done
+	set -e; \
+	for python in $(PY3VERS); do \
+		for build in \  -dbg; do \
+			find zmq -name '*.so' -delete; \
+			python$$python$$build setup.py build_ext --inplace; \
+			python$$python$$build setup.py test; \
+		done; \
+	done
 endif
 
 override_dh_strip:
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip --dbg-package=python-zmq-dbg
+	dh_strip -Xpython3 --dbg-package=python-zmq-dbg
+	dh_strip -X"python2.*" --dbg-package=python3-zmq-dbg
 endif
 
 get-orig-source:
