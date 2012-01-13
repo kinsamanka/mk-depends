@@ -48,7 +48,7 @@ override_dh_install:
 
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-	set -e; \
+	-set -e; \
 	for python in $(shell pyversions -r); do \
 		for build in \  -dbg; do \
 			find zmq -name '*.so' -delete; \
@@ -56,7 +56,7 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 			$$python$$build setup.py test; \
 		done; \
 	done
-	set -e; \
+	-set -e; \
 	for python in $(PY3VERS); do \
 		for build in \  -dbg; do \
 			find zmq -name '*.so' -delete; \

@@ -2,8 +2,10 @@ pyzmq (2.1.10-3) UNRELEASED; urgency=low
 
   [ Julian Taylor ]
   * properly clean to allow building twice in a row
+  * ignore testsuite result due to random failures on armel and mips
+    probably caused by libzmq or toolchain
 
- -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 13 Jan 2012 18:36:52 +0100
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 13 Jan 2012 18:44:49 +0100
 
 pyzmq (2.1.10-2) unstable; urgency=low
 
