@@ -18,6 +18,11 @@ override_dh_auto_clean:
 	  find zmq -name '*.c' -delete; \
 	  find zmq -name '*.so' -delete; \
 	fi
+	set -e && for pyv in $(PY3VERS); do \
+	  python$$pyv setup.py clean -a; \
+	  python$$pyv-dbg setup.py clean -a; \
+	done
+	find $(CURDIR) -name "*.pyc" -delete
 	rm -f conf/*.pickle
 
 override_dh_install:

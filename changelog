@@ -1,3 +1,10 @@
+pyzmq (2.1.10-3) UNRELEASED; urgency=low
+
+  [ Julian Taylor ]
+  * properly clean to allow building twice in a row
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 13 Jan 2012 18:36:52 +0100
+
 pyzmq (2.1.10-2) unstable; urgency=low
 
   [ Julian Taylor ]
