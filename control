@@ -54,7 +54,7 @@ Description: Python bindings for 0MQ library - debugging files
 Package: python3-zmq
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, ${python3:Depends}
-Description: Python bindings for 0MQ library
+Description: Python3 bindings for 0MQ library
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
  for applications in most common languages.
@@ -76,7 +76,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends},
  python3-zmq (= ${binary:Version})
 Recommends: python-dbg
-Description: Python bindings for 0MQ library - debugging files
+Description: Python3 bindings for 0MQ library - debugging files
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
  for applications in most common languages.
