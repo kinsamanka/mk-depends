@@ -6,6 +6,7 @@ pyzmq (2.1.10-3) UNRELEASED; urgency=low
     probably caused by libzmq or toolchain
   * add Python3 to short description of py3 packages
   * wrap-and-sort debian/
+  * add python-nose to build depends to get better test result output
 
  -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 13 Jan 2012 18:44:49 +0100
 
