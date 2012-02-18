@@ -5,8 +5,8 @@ Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.
 Uploaders: Miguel Landaeta <miguel@miguel.cc>
 Build-Depends: cython-dbg (>= 0.13),
                debhelper (>= 7.0.50~),
-               libzmq-dev (<= 2.1.11),
-               libzmq-dev (>= 2.1.10),
+               libzmq-dev (<= 2.1.12),
+               libzmq-dev (>= 2.1.11),
                python-all-dbg (>= 2.6.6-3~),
                python-all-dev (>= 2.6.6-3~),
                python-nose,
