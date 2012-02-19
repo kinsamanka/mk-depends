@@ -2,6 +2,7 @@ pyzmq (2.1.11-1) UNRELEASED; urgency=low
 
   [ Julian Taylor ]
   * New upstream release (Closes: #655793)
+  * added myself to Uploaders
   * properly clean to allow building twice in a row
   * ignore testsuite result due to random failures on armel and mips
     probably caused by libzmq or toolchain
@@ -11,7 +12,7 @@ pyzmq (2.1.11-1) UNRELEASED; urgency=low
   * add python-numpy to build depends to get more tests
   * use githubredir.debian.net in debian/watch
 
- -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Sat, 18 Feb 2012 13:56:38 +0100
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 19 Feb 2012 14:13:14 +0100
 
 pyzmq (2.1.10-2) unstable; urgency=low
 
