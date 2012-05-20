@@ -1,3 +1,9 @@
+pyzmq (2.2.0-1) UNRELEASED; urgency=low
+
+  * New upstream release
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 20 May 2012 14:00:48 +0200
+
 pyzmq (2.1.11-1) unstable; urgency=low
 
   [ Julian Taylor ]
