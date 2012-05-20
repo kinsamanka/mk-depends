@@ -3,8 +3,9 @@ pyzmq (2.2.0-1) UNRELEASED; urgency=low
   * New upstream release
   * update debian/copyright for relicensing of non core files to BSD-3-clause
   * bump standard to 3.9.3, no changes required
+  * build with hardening flags
 
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 20 May 2012 14:32:30 +0200
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 20 May 2012 14:56:26 +0200
 
 pyzmq (2.1.11-1) unstable; urgency=low
 
