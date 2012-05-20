@@ -6,9 +6,9 @@ Bug-Debian: http://bugs.debian.org/590633
 Forwarded: no
 Last-Update: 2011-05-21
 
---- pyzmq-2.1.7.orig/setup.py
-+++ pyzmq-2.1.7/setup.py
-@@ -466,7 +466,8 @@ COMPILER_SETTINGS['extra_compile_args']
+--- a/setup.py
++++ b/setup.py
+@@ -502,7 +502,8 @@
  # Extensions
  #-----------------------------------------------------------------------------
  
@@ -17,4 +17,4 @@ Last-Update: 2011-05-21
 +cmdclass = {'test':TestCommand, 'revision':GitRevisionCommand,
              'configure': Configure, 'build': CopyingBuild}
  
- COMPILER_SETTINGS['include_dirs'] += [pjoin('zmq', sub) for sub in ('utils','core','devices')]
+ def pxd(subdir, name):
