@@ -1,0 +1,5 @@
+Tests: python2
+Depends: python-all, python-zmq, python-nose, python-numpy, python-tornado
+
+Tests: python3
+Depends: python3-all, python3-zmq, python3-nose, python3-numpy, python3-tornado

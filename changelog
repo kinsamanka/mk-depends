@@ -3,8 +3,9 @@ pyzmq (2.2.0-2) UNRELEASED; urgency=low
   * relicense debian packaging to LGPL-3
   * update watch file to use github directly
     thanks to Bart Martens for the file
+  * add autopkgtests
 
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 28 May 2012 21:33:49 +0200
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 11 Dec 2012 20:36:31 +0100
 
 pyzmq (2.2.0-1) unstable; urgency=low
 
