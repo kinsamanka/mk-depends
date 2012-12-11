@@ -21,6 +21,7 @@ X-Python3-Version: >= 3.2
 Homepage: http://www.zeromq.org/bindings:python
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/pyzmq/trunk
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyzmq/trunk/
+XS-Testsuite: autopkgtest
 
 Package: python-zmq
 Architecture: any
