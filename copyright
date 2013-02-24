@@ -53,7 +53,7 @@ License: Apache-2.0
 
 Files: debian/*
 Copyright: 2010-2011, Miguel Landaeta <miguel@miguel.cc>
- 2011-2012, Julian Taylor
+ 2011-2013, Julian Taylor
 License: LGPL-3
 
 License: BSD-3-clause
