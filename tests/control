@@ -1,5 +1,8 @@
 Tests: python2
-Depends: python-all, python-zmq, python-nose, python-numpy, python-tornado
+Depends: python-all, python-zmq, python-nose, python-numpy, python-tornado, python-gevent
+
+# gevent-dbg broken 661342
+# python-zmq-dbg, python-numpy-dbg, python-gevent-dbg
 
 Tests: python3
-Depends: python3-all, python3-zmq, python3-nose, python3-numpy, python3-tornado
+Depends: python3-all, python3-all-dbg, python3-zmq, python3-zmq-dbg, python3-nose, python3-numpy, python3-numpy-dbg, python3-tornado
