@@ -21,12 +21,10 @@ override_dh_auto_clean:
 	  find zmq -name '*.c' -delete; \
 	  find zmq -name '*.so' -delete; \
 	fi
-	set -e && for pyv in $(PY3VERS); do \
-	  python$$pyv setup.py clean -a; \
-	  python$$pyv-dbg setup.py clean -a; \
-	done
+	rm -rf build
 	find $(CURDIR) -name "*.pyc" -delete
 	rm -f conf/*.pickle
+	rm -f conf/*.json
 
 override_dh_install:
 	# Install everything excluding the *_d.so debug extensions to python-zmq
