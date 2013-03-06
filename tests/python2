@@ -8,7 +8,6 @@ cd "$ADTTMP"
 for py in $pys; do
     echo "=== $py ==="
     $py /usr/bin/nosetests -v zmq 2>&1
-#disabled as gevent is broken #661342
-#echo "=== $py-dbg ==="
-#$py-dbg /usr/bin/nosetests -v zmq 2>&1
+    echo "=== $py-dbg ==="
+    $py-dbg /usr/bin/nosetests -v zmq 2>&1
 done
