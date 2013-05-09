@@ -1,0 +1,39 @@
+Description: Cython 0.19 disables assignment of `char *` to `str`
+Origin 22cede5dbda55dcab6a99137147e30f3be530cf1
+Applied-Upstream: v13.0.1
+Author: MinRK <benjaminrk@gmail.com>
+
+--- a/zmq/utils/buffers.pxd
++++ b/zmq/utils/buffers.pxd
+@@ -140,10 +140,11 @@ cdef inline object asbuffer(object ob, i
+ 
+     cdef void *bptr = NULL
+     cdef Py_ssize_t blen = 0, bitemlen = 0
+-    cdef str bfmt = None
+     cdef Py_buffer view
+     cdef int flags = PyBUF_SIMPLE
+     cdef int mode = 0
++    
++    bfmt = None
+ 
+     mode = check_buffer(ob)
+     if mode == 0:
+@@ -179,7 +180,7 @@ cdef inline object asbuffer(object ob, i
+                     bitemlen = ob.itemsize
+                 except AttributeError:
+                     if isinstance(ob, bytes):
+-                        bfmt = "B"
++                        bfmt = b"B"
+                         bitemlen = 1
+                     else:
+                         # nothing found
+@@ -188,6 +189,9 @@ cdef inline object asbuffer(object ob, i
+     if base: base[0] = <void *>bptr
+     if size: size[0] = <Py_ssize_t>blen
+     if itemsize: itemsize[0] = <Py_ssize_t>bitemlen
++    
++    if PY_MAJOR_VERSION >= 3 and bfmt is not None:
++        return bfmt.decode('ascii')
+     return bfmt
+ 
+ 

@@ -1,1 +1,2 @@
 fix-py3-green.patch
+cython0.19-compat.patch
