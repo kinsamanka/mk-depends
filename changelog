@@ -1,19 +1,14 @@
-pyzmq (2.2.0.1-3) unstable; urgency=low
+pyzmq (2.2.0.1-2) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * upload to unstable
+  * python-gevent-dbg is fixed, enable python2 dbg autopkgtests
+  * cython0.19-compat.patch: fix build with cython 0.19
 
   [ Jakub Wilk ]
   * Use canonical URIs for Vcs-* fields.
 
-  [ Julian Taylor ]
-  * upload to unstable
-  * cython0.19-compat.patch: fix build with cython 0.19
-
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 09 May 2013 15:07:29 +0200
-
-pyzmq (2.2.0.1-2) experimental; urgency=low
-
-  * python-gevent-dbg is fixed, enable python2 dbg autopkgtests
-
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 05 Mar 2013 19:04:12 +0100
 
 pyzmq (2.2.0.1-1) experimental; urgency=low
 
