@@ -1,3 +1,10 @@
+pyzmq (13.1.0-1) unstable; urgency=low
+
+  * New upstream release built with zeromq3 (Closes: #698830)
+    - drop all patches
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 12 May 2013 13:59:20 +0200
+
 pyzmq (2.2.0.1-2) unstable; urgency=low
 
   [ Julian Taylor ]
