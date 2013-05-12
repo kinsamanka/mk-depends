@@ -4,6 +4,7 @@ pyzmq (13.1.0-1) unstable; urgency=low
     - drop all patches
   * workaround-gevent.patch: workaround issue with gevent < 1.0
   * noncopysend-test.patch: avoid uninitialized values in tests
+  * update copyright
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 12 May 2013 13:59:20 +0200
 

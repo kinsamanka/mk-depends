@@ -1,11 +1,12 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pyzmq
-Upstream-Contact: Brian E. Granger <ellisonbg@gmail.com>
+Upstream-Contact: Min Ragan-Kelley <benjaminrk@gmail.com>
 Source: https://github.com/zeromq/pyzmq/downloads
 
 Files: *
 Copyright:  2010-2012, Brian Granger
- 2010-2012, Min Ragan-Kelley
+ 2010-2013, Min Ragan-Kelley
+ 2013 Felipe Cruz
 License: BSD-3-clause
 
 Files: examples/mongodb/*
@@ -25,7 +26,7 @@ Files: zmq/core/*
 Copyright: 2010-2011, Brian E. Granger
  2010, Andrew Gwozdziewycz
  2010, Fernando Perez
- 2011, Min Ragan-Kelley
+ 2011, 2013, Min Ragan-Kelley
 License: LGPL-3
 
 Files: zmq/devices/monitoredqueue.pxd
