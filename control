@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Miguel Landaeta <miguel@miguel.cc>,
            Julian Taylor <jtaylor.debian@googlemail.com>
-Build-Depends: cython (>= 0.13),
-               cython-dbg (>= 0.13),
+Build-Depends: cython (>= 0.16),
+               cython-dbg (>= 0.16),
                debhelper (>= 7.0.50~),
                dpkg-dev (>= 1.16.1~),
                libzmq3-dev,

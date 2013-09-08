@@ -1,3 +1,9 @@
+pyzmq (13.1.0-1ubuntu1) UNRELEASED; urgency=low
+
+  * bump cython build depend version to required >= 0.16 (Closes: #721711)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 08 Sep 2013 15:24:25 +0200
+
 pyzmq (13.1.0-1) unstable; urgency=low
 
   * New upstream release built with zeromq3 (Closes: #698830)
