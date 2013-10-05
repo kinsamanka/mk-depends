@@ -7,7 +7,7 @@ cd "$ADTTMP"
 
 for py in $pys; do
     echo "=== $py ==="
-    $py /usr/bin/nosetests -v zmq 2>&1
+    $py /usr/bin/nosetests -v zmq.tests 2>&1
     echo "=== $py-dbg ==="
-    $py-dbg /usr/bin/nosetests -v zmq 2>&1
+    $py-dbg /usr/bin/nosetests -v zmq.tests 2>&1
 done
