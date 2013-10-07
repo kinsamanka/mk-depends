@@ -1,8 +1,9 @@
-pyzmq (13.1.0-1ubuntu1) UNRELEASED; urgency=low
+pyzmq (13.1.0-2) UNRELEASED; urgency=low
 
   * bump cython build depend version to required >= 0.16 (Closes: #721711)
   * run nose with zmq.tests to avoid autopkgtest issues if optional
     dependencies are missing
+  * bump X-Python-Version to >= 2.6 as required by 0.13.x
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 08 Sep 2013 15:24:25 +0200
 

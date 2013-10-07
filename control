@@ -17,7 +17,7 @@ Build-Depends: cython (>= 0.16),
                python3-all-dbg (>= 3.2),
                python3-all-dev (>= 3.2)
 Standards-Version: 3.9.4
-X-Python-Version: >= 2.4
+X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Homepage: http://www.zeromq.org/bindings:python
 Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pyzmq/trunk/
