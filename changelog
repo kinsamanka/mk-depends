@@ -1,4 +1,4 @@
-pyzmq (14.0.1-1) UNRELEASED; urgency=low
+pyzmq (14.0.1-1) unstable; urgency=low
 
   * New upstream release
     drop upstream applied workaround-gevent.patch
