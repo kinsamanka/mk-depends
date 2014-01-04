@@ -12,7 +12,7 @@ export PYBUILD_OPTION=--verbose
 export DH_VERBOSE=1
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2,python3,pypy --buildsystem=pybuild
 
 override_dh_install:
 	dh_install

@@ -7,6 +7,7 @@ Uploaders: Miguel Landaeta <miguel@miguel.cc>,
 Build-Depends: cython (>= 0.16),
                cython-dbg (>= 0.16),
                debhelper (>= 8.1~),
+               dh-python,
                dpkg-dev (>= 1.16.1~),
                libzmq3-dev,
                pypy (>= 2.0.0),
@@ -110,7 +111,7 @@ Description: Python3 bindings for 0MQ library - debugging files
 
 Package: pypy-zmq
 Architecture: any
-Depends: pypy (>= 2.0.0), ${misc:Depends}, ${shlibs:Depends}, libzmq3-dev
+Depends: libzmq3-dev, pypy (>= 2.0.0), ${misc:Depends}, ${shlibs:Depends}
 Description: PyPy bindings for 0MQ library
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
