@@ -1,0 +1,49 @@
+Description: check package root for cffi binaries
+ cffi checks __pycache__ for binaries which is cleaned by pypy installation so
+ packages can't ship in there.
+ Instead ship in package root and patch module finding to look in there.
+Bug: https://bitbucket.org/cffi/cffi/issue/109/enable-sane-packaging-for-cffi
+
+--- a/zmq/cffi_core/__init__.py
++++ b/zmq/cffi_core/__init__.py
+@@ -9,6 +9,40 @@
+ #  the file COPYING.BSD, distributed as part of this software.
+ #-----------------------------------------------------------------------------
+ 
++import imp
++import os.path
++import sys
++
++import cffi.vengine_cpy
++import cffi.vengine_gen
++ma_triplet = None
++
++def vengine_gen_find_module(self, module_name, path, so_suffixes):
++    global ma_triplet
++    if ma_triplet is None:
++        try:
++            import subprocess as sp
++            p = sp.Popen(["gcc", "-print-multiarch"], stdout=sp.PIPE)
++            ma_triplet = str(p.communicate()[0].decode().strip())
++        except:
++            import warnings
++            warnings.warn('failed to detect multiarch paths, please install gcc')
++
++    for so_suffix in so_suffixes + ['.%s-%s.so' % (imp.get_tag(), ma_triplet)]:
++        basename = module_name + so_suffix
++        if path is None:
++            path = sys.path
++            # import from non root package would try __pycache__ which is
++            # cleaned by pypy installation
++            path.insert(0, "/usr/lib/pypy/dist-packages/zmq/cffi_core")
++        for dirname in path:
++            filename = os.path.join(dirname, basename)
++            if os.path.isfile(filename):
++                return filename
++
++
++cffi.vengine_gen.VGenericEngine.find_module = vengine_gen_find_module
++
+ from zmq.cffi_core import (constants, error, message, context, socket,
+                            _poll, devices, stopwatch)
+ 
