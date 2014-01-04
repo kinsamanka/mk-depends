@@ -29,8 +29,10 @@ override_dh_install:
 
 	# build shared libraries for pypy and install them
 	pypy -c 'import zmq'
-	mv -v zmq/backend/cffi/__pycache__/*.c zmq/backend/cffi/__pycache__/*so \
+	mv -v zmq/backend/cffi/__pycache__/*so \
 	  $(CURDIR)/debian/pypy-zmq/usr/lib/pypy/dist-packages/zmq/backend/cffi
+	# put there by install, not needed
+	rm -f $(CURDIR)/debian/pypy-zmq/usr/lib/pypy/dist-packages/_cffi*.so
 
 	find debian/python-zmq -depth -empty -exec rmdir {} \;
 	find debian/python-zmq-dbg -depth -empty -exec rmdir {} \;
