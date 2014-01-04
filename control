@@ -110,7 +110,12 @@ Description: Python3 bindings for 0MQ library - debugging files
 
 Package: pypy-zmq
 Architecture: any
-Depends: gcc, libzmq3-dev, pypy (>= 2.0.0), ${misc:Depends}, ${shlibs:Depends}
+Depends: gcc,
+         libzmq3-dev,
+         pypy (>= 2.0.0),
+         ${misc:Depends},
+         ${pypy:Depends},
+         ${shlibs:Depends}
 Description: PyPy bindings for 0MQ library
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
