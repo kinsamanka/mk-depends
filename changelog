@@ -12,6 +12,7 @@ pyzmq (14.0.1-1) unstable; urgency=low
   * bump debhelper to >= 8.1~ for build-arch support
   * remove Miguel Landaeta from Uploaders. (Closes: #728413)
     Thank you for your work.
+  * bump standard to 3.9.5, no changes required
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 04 Jan 2014 22:24:19 +0100
 

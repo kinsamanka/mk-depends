@@ -18,7 +18,7 @@ Build-Depends: cython (>= 0.16),
                python3 (>= 3.3.0-2),
                python3-all-dbg (>= 3.2),
                python3-all-dev (>= 3.2)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Homepage: http://www.zeromq.org/bindings:python
