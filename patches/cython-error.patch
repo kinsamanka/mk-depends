@@ -1,0 +1,44 @@
+Description: fix possible use of deallocated object
+ __dealloc__ method might be called when the object is partially deleted, so
+ e.g. its methods must not be called. Fix this by copying the code of the
+ methods which require no object internals.
+Author: Julian Taylor <jtaylor.debian@googlemail.com>
+Bug: https://github.com/zeromq/pyzmq/issues/458
+
+--- a/zmq/backend/cython/context.pyx
++++ b/zmq/backend/cython/context.pyx
+@@ -94,7 +94,14 @@ cdef class Context:
+             free(self._sockets)
+             self._sockets = NULL
+             self._n_sockets = 0
+-        self.term()
++
++        if self.handle != NULL and not self.closed and getpid() == self._pid:
++            with nogil:
++                rc = zmq_ctx_destroy(self.handle)
++            _check_rc(rc)
++            self.handle = NULL
++            self.closed = True
++
+     
+     cdef inline void _add_socket(self, void* handle):
+         """Add a socket handle to be closed when Context terminates.
+diff --git a/zmq/backend/cython/utils.pyx b/zmq/backend/cython/utils.pyx
+index 0b318ee..43ed3d4 100644
+--- a/zmq/backend/cython/utils.pyx
++++ b/zmq/backend/cython/utils.pyx
+@@ -64,10 +64,9 @@ cdef class Stopwatch:
+         self.watch = NULL
+ 
+     def __dealloc__(self):
+-        try:
+-            self.stop()
+-        except ZMQError:
+-            pass
++        if self.watch:
++            zmq_stopwatch_stop(self.watch)
++            self.watch = NULL
+ 
+     def start(self):
+         """s.start()
+

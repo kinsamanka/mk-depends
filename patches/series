@@ -1,2 +1,3 @@
 noncopysend-test.patch
 cffi-fix.patch
+cython-error.patch
