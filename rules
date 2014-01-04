@@ -20,14 +20,14 @@ override_dh_install:
 	find debian/python3-zmq-dbg/usr/lib/ ! -type d ! -name '*.so' -delete
 	find debian/python-zmq-dbg/usr/lib/ ! -type d ! -name '*.so' -delete
 	# cffi is only used for pypy
-	rm -rf debian/python-zmq/usr/lib/python*/dist-packages/zmq/cffi_core/
-	rm -rf debian/python-dbg-zmq/usr/lib/python*/dist-packages/zmq/cffi_core/
-	rm -rf debian/python3-zmq/usr/lib/python*/dist-packages/zmq/cffi_core/
-	rm -rf debian/python3-dbg-zmq/usr/lib/python*/dist-packages/zmq/cffi_core/
+	rm -rf debian/python-zmq/usr/lib/python*/dist-packages/zmq/backend/cffi/
+	rm -rf debian/python-dbg-zmq/usr/lib/python*/dist-packages/zmq/backend/cffi/
+	rm -rf debian/python3-zmq/usr/lib/python*/dist-packages/zmq/backend/cffi/
+	rm -rf debian/python3-dbg-zmq/usr/lib/python*/dist-packages/zmq/backend/cffi/
 	# cython core is only used for cpython
-	rm -rf debian/pypy-zmq/usr/lib/pypy/dist-packages/zmq/core/
+	rm -rf debian/pypy-zmq/usr/lib/pypy/dist-packages/zmq/backend/cython
 
 	# build shared libraries for pypy and install them
 	pypy -c 'import zmq'
-	mv -v zmq/cffi_core/__pycache__/*.c zmq/cffi_core/__pycache__/*so \
-	  $(CURDIR)/debian/pypy-zmq/usr/lib/pypy/dist-packages/zmq/cffi_core/
+	mv -v zmq/backend/cffi/__pycache__/*.c zmq/backend/cffi/__pycache__/*so \
+	  $(CURDIR)/debian/pypy-zmq/usr/lib/pypy/dist-packages/zmq/backend/cffi

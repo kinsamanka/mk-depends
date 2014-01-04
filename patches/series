@@ -1,4 +1,2 @@
-workaround-gevent.patch
 noncopysend-test.patch
-clean-all.patch
 cffi-fix.patch
