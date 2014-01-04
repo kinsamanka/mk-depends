@@ -10,8 +10,10 @@ pyzmq (14.0.1-1) unstable; urgency=low
     dependencies are missing
   * bump X-Python-Version to >= 2.6 as required by 0.13.x
   * bump debhelper to >= 8.1~ for build-arch support
+  * remove Miguel Landaeta from Uploaders. (Closes: #728413)
+    Thank you for your work.
 
- -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 08 Sep 2013 15:24:25 +0200
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 04 Jan 2014 22:24:19 +0100
 
 pyzmq (13.1.0-1) unstable; urgency=low
 

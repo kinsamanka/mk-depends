@@ -2,8 +2,7 @@ Source: pyzmq
 Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Miguel Landaeta <miguel@miguel.cc>,
-           Julian Taylor <jtaylor.debian@googlemail.com>
+Uploaders: Julian Taylor <jtaylor.debian@googlemail.com>
 Build-Depends: cython (>= 0.16),
                cython-dbg (>= 0.16),
                debhelper (>= 8.1~),
