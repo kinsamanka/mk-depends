@@ -31,3 +31,9 @@ override_dh_install:
 	pypy -c 'import zmq'
 	mv -v zmq/backend/cffi/__pycache__/*.c zmq/backend/cffi/__pycache__/*so \
 	  $(CURDIR)/debian/pypy-zmq/usr/lib/pypy/dist-packages/zmq/backend/cffi
+
+	find debian/python-zmq -depth -empty -exec rmdir {} \;
+	find debian/python-zmq-dbg -depth -empty -exec rmdir {} \;
+	find debian/python3-zmq -depth -empty -exec rmdir {} \;
+	find debian/python3-zmq-dbg -depth -empty -exec rmdir {} \;
+	find debian/pypy-zmq -depth -empty -exec rmdir {} \;
