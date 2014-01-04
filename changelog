@@ -1,5 +1,6 @@
 pyzmq (13.1.0-2) UNRELEASED; urgency=low
 
+  * provide pypy-zmq package
   * bump cython build depend version to required >= 0.16 (Closes: #721711)
   * run nose with zmq.tests to avoid autopkgtest issues if optional
     dependencies are missing
