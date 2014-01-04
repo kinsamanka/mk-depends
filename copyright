@@ -22,7 +22,7 @@ Copyright: 2010, Brian E. Granger
  2010, Eugene Chernyshov
 License: LGPL-3
 
-Files: zmq/core/*
+Files: zmq/backends/cython
 Copyright: 2010-2011, Brian E. Granger
  2010, Andrew Gwozdziewycz
  2010, Fernando Perez
@@ -35,7 +35,7 @@ Copyright: 2010, Brian E. Granger
 License: LGPL-3
 
 Files: perf/*
-Copyright: 2007-2010, iMatix Corporation
+Copyright: 2007-2010, iMatix Corporation / 2013 Brian Granger, Min Ragan-Kelley
 License: LGPL-3
 
 Files: docs/sphinxext/sphinx_cython.py
@@ -54,7 +54,7 @@ License: Apache-2.0
 
 Files: debian/*
 Copyright: 2010-2011, Miguel Landaeta <miguel@miguel.cc>
- 2011-2013, Julian Taylor
+ 2011-2014, Julian Taylor
 License: LGPL-3
 
 License: BSD-3-clause
