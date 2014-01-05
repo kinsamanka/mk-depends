@@ -112,7 +112,7 @@ Package: pypy-zmq
 Architecture: any
 Depends: gcc,
          libzmq3-dev,
-         pypy (>= 2.0.0),
+         pypy (>= 2.2),
          ${misc:Depends},
          ${pypy:Depends},
          ${shlibs:Depends}
