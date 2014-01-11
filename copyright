@@ -35,7 +35,8 @@ Copyright: 2010, Brian E. Granger
 License: LGPL-3
 
 Files: perf/*
-Copyright: 2007-2010, iMatix Corporation / 2013 Brian Granger, Min Ragan-Kelley
+Copyright: 2007-2010, iMatix Corporation
+ 2013 Brian Granger, Min Ragan-Kelley
 License: LGPL-3
 
 Files: docs/sphinxext/sphinx_cython.py
@@ -47,8 +48,7 @@ Copyright: 2003-2007, Robey Pointer <robeypointer@gmail.com>,
  2010-2011, IPython Development Team
 License: LGPL-2.1
 
-Files: zmq/eventloop/zmqstream.py
- zmq/eventloop/ioloop.py
+Files: zmq/eventloop/zmqstream.py zmq/eventloop/minitornado/*
 Copyright: 2009, Facebook.
 License: Apache-2.0
 
