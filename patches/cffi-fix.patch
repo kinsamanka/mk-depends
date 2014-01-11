@@ -5,6 +5,8 @@ Description: check package root for cffi binaries
  Also use fixed path in a place passed to cffi to get the same checksum
  in build and install. After it is installed no build is needed so it doesn't
  matter if its wrong.
+ This patch assumes pypy 2.2 api, won't work with 2.1 as so_suffices is no
+ list.
 Bug: https://bitbucket.org/cffi/cffi/issue/109/enable-sane-packaging-for-cffi
 
 --- a/zmq/backend/cffi/__init__.py
