@@ -34,8 +34,8 @@ override_dh_install:
 	# put there by install, not needed
 	rm -f $(CURDIR)/debian/pypy-zmq/usr/lib/pypy/dist-packages/_cffi*.so
 
-	find debian/python-zmq -depth -empty -exec rmdir {} \;
-	find debian/python-zmq-dbg -depth -empty -exec rmdir {} \;
-	find debian/python3-zmq -depth -empty -exec rmdir {} \;
-	find debian/python3-zmq-dbg -depth -empty -exec rmdir {} \;
-	find debian/pypy-zmq -depth -empty -exec rmdir {} \;
+	find debian/python-zmq -depth -type d -empty -exec rmdir {} \;
+	find debian/python-zmq-dbg -type d -depth -empty -exec rmdir {} \;
+	find debian/python3-zmq -depth -type d -empty -exec rmdir {} \;
+	find debian/python3-zmq-dbg -type d -depth -empty -exec rmdir {} \;
+	find debian/pypy-zmq -type d -depth -empty -exec rmdir {} \;
