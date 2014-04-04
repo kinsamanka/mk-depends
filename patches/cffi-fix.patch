@@ -54,12 +54,16 @@ Bug: https://bitbucket.org/cffi/cffi/issue/109/enable-sane-packaging-for-cffi
  
 --- a/zmq/backend/cffi/_cffi.py
 +++ b/zmq/backend/cffi/_cffi.py
-@@ -196,7 +196,7 @@ else:
+@@ -119,10 +119,10 @@ int get_ipc_path_max_len(void);
  
- 
- ffi.cdef(functions)
--zmq_utils = os.path.dirname(zmq.utils.__file__)
-+zmq_utils = "zmq/utils"
- 
- C = ffi.verify('''
-     #include <stdio.h>
+ def load_compiler_config():
+     import zmq
+-    zmq_dir = dirname(zmq.__file__)
++    zmq_dir = "zmq"
+     zmq_parent = dirname(zmq_dir)
+     
+-    fname = join(zmq_dir, 'utils', 'compiler.json')
++    fname = join(dirname(zmq.__file__), 'utils', 'compiler.json')
+     if os.path.exists(fname):
+         with open(fname) as f:
+             cfg = json.load(f)
