@@ -5,11 +5,11 @@ Forwarded: not-needed
 
 --- a/zmq/tests/test_message.py
 +++ b/zmq/tests/test_message.py
-@@ -340,10 +340,8 @@ class TestFrame(BaseZMQTestCase):
+@@ -336,10 +336,8 @@ class TestFrame(BaseZMQTestCase):
          for i in range(1,len(shapes)+1):
              shape = shapes[:i]
              for dt in dtypes:
--                A = numpy.ndarray(shape, dtype=dt)
+-                A = numpy.empty(shape, dtype=dt)
 -                while numpy.isnan(A).any():
 -                    # don't let nan sneak in
 -                    A = numpy.ndarray(shape, dtype=dt)
