@@ -1,3 +1,9 @@
+pyzmq (14.3.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 14 May 2014 21:27:23 +0200
+
 pyzmq (14.2.0-1) unstable; urgency=medium
 
   * New upstream release
