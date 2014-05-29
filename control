@@ -8,7 +8,7 @@ Build-Depends: cython (>= 0.16),
                debhelper (>= 8.1~),
                dh-python (>= 1.20131021-1~),
                dpkg-dev (>= 1.16.1~),
-               libzmq3-dev,
+               libzmq4-dev,
                pypy (>= 2.2),
                python-all-dbg (>= 2.6.6-3~),
                python-all-dev (>= 2.6.6-3~),
@@ -111,7 +111,7 @@ Description: Python3 bindings for 0MQ library - debugging files
 Package: pypy-zmq
 Architecture: any
 Depends: gcc,
-         libzmq3-dev,
+         libzmq4-dev,
          pypy (>= 2.2),
          ${misc:Depends},
          ${pypy:Depends},
