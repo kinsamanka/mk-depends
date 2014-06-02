@@ -2,7 +2,7 @@ Source: pyzmq
 Section: python
 Priority: optional
 Maintainer: John Morris <john@zultron.com>
-Build-Depends: cython-dbg (>= 0.13),
+Build-Depends: cython-dbg (>= 0.16),
                debhelper (>= 7.0.50~),
                dpkg-dev (>= 1.16.1~),
                libzmq4-dev,
