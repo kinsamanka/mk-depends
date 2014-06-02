@@ -1,3 +1,9 @@
+jansson (2.6-2~1mk) unstable; urgency=high
+
+  * Backport to wheezy for Machinekit
+
+ -- John Morris <john@zultron.com>  Mon, 02 Jun 2014 06:46:32 +0200
+
 jansson (2.6-1) unstable; urgency=high
 
   * New upstream release

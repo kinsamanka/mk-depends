@@ -1,12 +1,12 @@
 Source: jansson
 Priority: optional
-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Maintainer: John Morris <john@zultron.com>
 Build-Depends: debhelper (>= 9), dh-autoreconf
 Build-Depends-Indep: python-sphinx (>= 1.0)
 Standards-Version: 3.9.5
 Section: libs
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/jansson.git
-Vcs-Git: git://anonscm.debian.org/collab-maint/jansson.git
+Vcs-Browser: https://github.com/zultron/jansson-deb
+Vcs-Git: https://github.com/zultron/jansson-deb.git
 Homepage: http://www.digip.org/jansson/
 
 Package: libjansson4
