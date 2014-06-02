@@ -4,7 +4,10 @@ Maintainer: John Morris <john@zultron.com>
 Build-Depends: debhelper (>= 9),
  autotools-dev,
  libzmq4-dev,
- libsodium-dev
+ libsodium-dev,
+ xmlto,
+ asciidoc,
+ pkg-config
 Standards-Version: 3.9.3
 Section: libs
 Homepage: http://czmq.zeromq.org/
