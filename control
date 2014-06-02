@@ -3,7 +3,6 @@ Priority: optional
 Maintainer: John Morris <john@zultron.com>
 Build-Depends: debhelper (>= 9),
  autotools-dev,
- libpgm-dev,
  libzmq4-dev
 Standards-Version: 3.9.3
 Section: libs
