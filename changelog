@@ -1,0 +1,5 @@
+czmq (1.2.0-1) UNRELEASED; urgency=low
+
+  * Initial release (Closes: #630761)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Mon, 06 Aug 2012 21:10:11 +0200
