@@ -1,6 +1,7 @@
-pyzmq (14.3.0-2) unstable; urgency=medium
+pyzmq (14.3.0-2~1mk) unstable; urgency=medium
 
   * Update for Machinekit packaging
+    - Backport of jessie package
 
  -- John Morris <john@zultron.com>  Thu, 29 May 2014 03:04:15 -0500
 
