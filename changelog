@@ -1,4 +1,4 @@
-czmq (2.2.0-0~1mk) UNRELEASED; urgency=low
+czmq (2.2.0-0.1mk) UNRELEASED; urgency=low
 
   * Update to 2.2.0
     - Packaged for Machinekit
