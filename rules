@@ -6,7 +6,7 @@ include /usr/share/dpkg/buildflags.mk
 
 
 %:
-	dh $@ --with python2,python3
+	dh $@ --with python2,python3 --parallel
 
 override_dh_auto_build:
 	dh_auto_build
