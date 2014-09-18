@@ -2,6 +2,9 @@ czmq (2.2.0-0.2) UNRELEASED; urgency=low
 
   * Update package name in symbols file after libczmq2 rename
     - 'dpkg-shlibdeps' uses 'libczmq1' for package dependency
+  * Update symbols file package versions
+    - Remove pkg release to ensure '~' components don't get in the way
+    - Remove 1.2.0 symbol versions, irrelevant after package rename
 
  -- John Morris <john@zultron.com>  Thu, 18 Sep 2014 12:28:28 -0500
 
