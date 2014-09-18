@@ -1,4 +1,4 @@
-libczmq.so.1 libczmq1 #MINVER#
+libczmq.so.1 libczmq2 #MINVER#
  s_thread_shim@Base 1.2.0
  sha1_init@Base 2.2.0-0~1mk~wheezy1
  sha1_loop@Base 2.2.0-0~1mk~wheezy1
