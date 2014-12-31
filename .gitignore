@@ -1,0 +1,6 @@
+
+# OSC
+/.osc/
+/pyzmq*.tar.gz
+/pyzmq*.dsc
+/pyzmq_*.debian.tar.xz
