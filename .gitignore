@@ -1,0 +1,6 @@
+
+# OSC
+/.osc/
+/jansson*.tar.bz2
+/jansson*.tar.gz
+/jansson*.dsc
