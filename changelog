@@ -1,3 +1,9 @@
+czmq (2.2.0-0.3) UNRELEASED; urgency=low
+
+  * Bump release for OBS build
+
+ -- John Morris <john@zultron.com>  Sat, 10 Jan 2015 00:49:24 -0600
+
 czmq (2.2.0-0.2) UNRELEASED; urgency=low
 
   * Update package name in symbols file after libczmq2 rename
