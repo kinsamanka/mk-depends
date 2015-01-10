@@ -1,3 +1,9 @@
+jansson (2.6-3) unstable; urgency=high
+
+  * Bump version for OBS build
+
+ -- John Morris <john@zultron.com>  Sat, 10 Jan 2015 00:56:25 -0600
+
 jansson (2.6-2~1mk) unstable; urgency=high
 
   * Backport to wheezy for Machinekit
