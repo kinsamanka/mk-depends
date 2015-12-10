@@ -24,7 +24,7 @@ XS-Testsuite: autopkgtest
 Package: python-zmq
 Architecture: any
 Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
-MultiArch: foreign
+Multi-Arch: foreign
 Description: Python bindings for 0MQ library
  Python bindings for 0MQ. 0MQ is a small, fast, and free
  software library that gives you message-passing concurrency
