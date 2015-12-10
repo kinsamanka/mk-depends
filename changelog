@@ -1,3 +1,9 @@
+czmq (2.2.0-0.6) UNRELEASED; urgency=low
+
+  * Rebuild against Wheezy zeromq3 package
+
+ -- John Morris <john@zultron.com>  Thu, 10 Dec 2015 00:45:41 -0600
+
 czmq (2.2.0-0.5) UNRELEASED; urgency=low
 
   * Enable 'DEB_BUILD_OPTIONS=nocheck'
