@@ -1,3 +1,9 @@
+pyzmq (14.3.0-5) unstable; urgency=medium
+
+  * Rebuild against Wheezy zeromq3 package
+
+ -- John Morris <john@zultron.com>  Thu, 10 Dec 2015 00:45:41 -0600
+
 pyzmq (14.3.0-4) unstable; urgency=medium
 
   * Add MultiArch: foreign
