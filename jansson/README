@@ -1,0 +1,7 @@
+Debian packaging for jansson
+
+Backport to wheezy for Machinekit
+
+
+From https://alioth.debian.org/anonscm/git/collab-maint/jansson.git
+commit 66e56ebb9ac377916dea9949b6b7792a995d3a6a
