@@ -1,0 +1,20 @@
+# ignore build artifacts
+/autoreconf.after
+/autoreconf.before
+/libzmq4-dbg.debhelper.log
+/libzmq4-dev.debhelper.log
+/libzmq4.debhelper.log
+/files
+/libzmq4-dbg.substvars
+/libzmq4-dbg/
+/libzmq4-dev.substvars
+/libzmq4-dev/
+/libzmq4.substvars
+/libzmq4/
+/tmp/
+
+# OSC
+/.osc/
+/zeromq4*.tar.gz
+/zeromq4*.dsc
+/zeromq4_*.debian.tar.xz

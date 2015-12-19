@@ -1,0 +1,3 @@
+revert-soname-to-3.patch
+increase-test-settle_time.patch
+disable_security_tests.patch

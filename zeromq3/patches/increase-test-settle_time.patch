@@ -1,0 +1,23 @@
+Fix occasional unit test errors by increasing SETTLE_TIME
+
+[  332s] lt-test_immediate: test_immediate.cpp:200:
+   	     int main(): Assertion `rc == -1' failed.
+[  332s] /bin/bash: line 5: 15456 Aborted                 ${dir}$tst
+[  332s] FAIL: test_immediate
+
+[  336s] lt-test_security_plain: testutil.hpp:143:
+   	     void expect_bounce_fail(void*, void*): Assertion `rc == 32' failed.
+[  336s] /bin/bash: line 5: 15754 Aborted                 ${dir}$tst
+[  336s] FAIL: test_security_plain
+
+--- zeromq3-4.0.5+dfsg.orig/tests/testutil.hpp	2014-10-14 03:06:40.000000000 -0500
++++ zeromq3-4.0.5+dfsg/tests/testutil.hpp	2014-12-30 19:04:32.162806409 -0600
+@@ -27,7 +27,7 @@
+ //  This defines the settle time used in tests; raise this if we
+ //  get test failures on slower systems due to binds/connects not
+ //  settled. Tested to work reliably at 1 msec on a fast PC.
+-#define SETTLE_TIME 10         //  In msec
++#define SETTLE_TIME 100         //  In msec
+ 
+ #undef NDEBUG
+ #include <time.h>

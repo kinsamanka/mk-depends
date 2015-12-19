@@ -1,0 +1,15 @@
+Debian packaging for zeromq3
+
+Build:
+
+  wget http://download.zeromq.org/zeromq-4.0.4.tar.gz \
+    -O zeromq3_4.0.5.orig.tar.gz
+  tar xzf zeromq3_4.0.5.orig.tar.gz 
+  cd zeromq-4.0.5/
+  git clone https://github.com/zultron/zeromq3-deb.git debian
+  debuild -us -uc
+
+Taken from Debian upstream:
+
+    http://anonscm.debian.org/gitweb/?p=collab-maint/zeromq3.git;a=tree;h=a109d2638a8892a8178019fe84f81e626043101c;hb=a109d2638a8892a8178019fe84f81e626043101c
+
