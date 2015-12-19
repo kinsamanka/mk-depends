@@ -1,0 +1,6 @@
+
+# OSC
+/.osc/
+/czmq*.tar.gz
+/czmq*.dsc
+/czmq_*.debian.tar.xz
