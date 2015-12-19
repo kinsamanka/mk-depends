@@ -1,0 +1,10 @@
+Debian packaging for pyzmq
+
+Build:
+
+  wget https://github.com/zeromq/pyzmq/archive/v14.3.0.tar.gz \
+      -O pyzmq_14.3.0.orig.tar.gz
+  tar xzf pyzmq_14.3.0.orig.tar.gz
+  cd pyzmq-14.3.0/
+  git clone https://github.com/zultron/pyzmq-deb.git debian
+  debuild -us -uc
